@@ -14,7 +14,7 @@ function DistrictCarousel() {
     
     const fetchDistricts = async () => {
       try {
-        const response = await axios.get(`https://localtreasures.onrender.com/getdistrictdatabystate?stateName=${selectedState}&countryName=${selectedCountry}`);
+        const response = await axios.get(`https://local-kdy0.onrender.com/getdistrictdatabystate?stateName=${selectedState}&countryName=${selectedCountry}`);
         setDistricts(response.data);
       } catch (error) {
         console.error("Failed to fetch districts:", error);

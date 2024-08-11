@@ -39,7 +39,7 @@ const NearbyProducts = () => {
             setCurrentLocation({ latitude, longitude });
 
             try {
-              const response = await axios.get(`https://localtreasures.onrender.com/getCurrentLocationProducts?latitude=${latitude}&longitude=${longitude}`);
+              const response = await axios.get(`https://local-kdy0.onrender.com/getCurrentLocationProducts?latitude=${latitude}&longitude=${longitude}`);
               setProducts(response.data);
             } catch (error) {
               console.error('Error fetching products:', error);

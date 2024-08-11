@@ -11,7 +11,7 @@ import countryRoutes from './routes/country.js';
 
 const PORT = process.env.PORT || 5000;
 const app = express();
-const allowedOrigins = ['http://localhost:3000', '*','https://localtreasures.onrender.com'];
+const allowedOrigins = ['http://localhost:3000', '*','https://local-kdy0.onrender.com'];
 app.use(cors({
   origin: 'http://localhost:3000', 
   methods: 'GET,POST,PUT,DELETE', 

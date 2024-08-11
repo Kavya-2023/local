@@ -85,7 +85,7 @@ const Products = () => {
   useEffect(() => {
     const fetchDistricts = async () => {
       try {
-        const response = await axios.get(`https://localtreasures.onrender.com/getdistrictdatabystate?stateName=${selectedState}&countryName=${selectedCountry}`);
+        const response = await axios.get(`https://local-kdy0.onrender.com/getdistrictdatabystate?stateName=${selectedState}&countryName=${selectedCountry}`);
         
         const districtOptions = response.data.map(district => ({
           value: district.name,
@@ -106,7 +106,7 @@ const Products = () => {
   const fetchAllProducts = async () => {
     try {
       setLoading(true);
-      let url = `https://localtreasures.onrender.com/products?stateName=${selectedState}`;
+      let url = `https://local-kdy0.onrender.com/products?stateName=${selectedState}`;
       const response = await axios.get(url);
       setProducts(response.data.products);
       setFilteredProducts(response.data.products);

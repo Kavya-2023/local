@@ -18,7 +18,7 @@ function DisplayDistrict() {
   useEffect(() => {
     const fetchDistrictData = async () => {
       try {
-        const response = await axios.get(`https://localtreasures.onrender.com/productsbydistrict?stateName=${selectedState}&districtName=${id}`);
+        const response = await axios.get(`https://local-kdy0.onrender.com/productsbydistrict?stateName=${selectedState}&districtName=${id}`);
         setProducts(response.data.products);
       } catch (error) {
         setError("Failed to fetch district data.");

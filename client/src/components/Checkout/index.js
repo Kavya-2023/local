@@ -65,7 +65,7 @@ const Checkout = () => {
   const handleOnlinePayment = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://localtreasures.onrender.com/order", {
+      const response = await axios.post("https://local-kdy0.onrender.com/order", {
         amount,
         currency,
         receipt: receiptId,
@@ -84,7 +84,7 @@ const Checkout = () => {
         handler: async function (response) {
           const body = { ...response };
 
-          const validateRes = await axios.post("https://localtreasures.onrender.com/order/validate", body);
+          const validateRes = await axios.post("https://local-kdy0.onrender.com/order/validate", body);
           console.log(validateRes.data);
           const jsonRes = validateRes.data;
           if (jsonRes.msg === "success") {
@@ -134,7 +134,7 @@ const Checkout = () => {
 
   const createOnlineOrder = async (name, email, phone, address, pincode, amount, paymentMethod, orderId, paymentId) => {
     try {
-      await axios.post('https://localtreasures.onrender.com/api/payment/order', {
+      await axios.post('https://local-kdy0.onrender.com/api/payment/order', {
         name,
         email,
         phone,
@@ -153,7 +153,7 @@ const Checkout = () => {
 
   const handleOfflinePayment = async () => {
     try {
-      const response = await axios.post('https://localtreasures.onrender.com/api/payment/order', {
+      const response = await axios.post('https://local-kdy0.onrender.com/api/payment/order', {
         name: form.name,
         email: form.email,
         phone: form.phone,

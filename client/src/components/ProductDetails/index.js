@@ -16,7 +16,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`https://localtreasures.onrender.com/products/${id}`);
+        const response = await axios.get(`https://local-kdy0.onrender.com/products/${id}`);
         setProduct(response.data);
         setLoading(false);
       } catch (error) {

@@ -23,7 +23,7 @@ const LoginPopUp = ({ toggleLogin, loginpopup, isLogin,setIsLogin }) => {
     e.preventDefault();
     
     if (isLogin) {
-      const response=await axios.post("https://localtreasures.onrender.com/auth/login",{email,password});
+      const response=await axios.post("https://local-kdy0.onrender.com/auth/login",{email,password});
       console.log(response.data)
       if (response.data.success==true){
         alert("Successfull SignIn");
@@ -35,7 +35,7 @@ const LoginPopUp = ({ toggleLogin, loginpopup, isLogin,setIsLogin }) => {
         setError(response.message);
       }
     } else {
-      const response=await axios.post("https://localtreasures.onrender.com/auth/signup",{name,email,password});
+      const response=await axios.post("https://local-kdy0.onrender.com/auth/signup",{name,email,password});
       if (response.data.success==true){
         alert("Successfull SignUp");
         setIsLogin(!isLogin);

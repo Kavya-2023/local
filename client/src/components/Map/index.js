@@ -36,7 +36,7 @@ const Map = () => {
 
   const fetchNearbyProducts = async (lat, lng) => {
     try {
-      const response = await axios.get(`https://localtreasures.onrender.com/district/products/nearby`, {
+      const response = await axios.get(`https://local-kdy0.onrender.com/district/products/nearby`, {
         params: {
           latitude: lat,
           longitude: lng,

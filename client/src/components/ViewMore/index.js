@@ -56,7 +56,7 @@ const ViewMore = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://localtreasures.onrender.com/productsbycategory?stateName=${selectedState}&categoryName=${category}`);
+        const response = await axios.get(`https://local-kdy0.onrender.com/productsbycategory?stateName=${selectedState}&categoryName=${category}`);
         setItems(response.data.products);
       } catch (err) {
         console.error("Failed to fetch data", err);
